@@ -100,3 +100,25 @@ getServerTime((serverTime) => {
 在倒计时结束前的一段时间里，先请求好数据，倒计时结束后，再渲染页面。
 
 关于倒计时，如果你有什么更好的解决方案，欢迎评论交流。
+
+
+<!-- Gitalk 评论 start  -->
+
+<!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>     <script type="text/javascript">
+    var gitalk = new Gitalk({
+
+    // gitalk的主要参数
+		clientID: `Github Application clientID`,
+		clientSecret: `Github Application clientSecret`,
+		repo: `存储你评论 issue 的 Github 仓库名`,
+		owner: 'Github 用户名',
+		admin: ['Github 用户名'],
+		id: '页面的唯一标识，gitalk会根据这个标识自动创建的issue的标签',
+
+    });
+    gitalk.render('gitalk-container');
+</script>
+<!-- Gitalk end -->
